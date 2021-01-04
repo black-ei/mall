@@ -1,0 +1,5 @@
+{
+  "code": 500,
+  "message": "Required request part 'file' is not present",
+  "data": null
+}

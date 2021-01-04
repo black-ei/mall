@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mingruishopservicexxx" />
+        <module name="mingruishopserviceapixxx" />
+        <module name="mingruishopbasiceurekaserver" />
+        <module name="mingruishopbasiczuulserver" />
+        <module name="mingruishopbasicuploadserver" />
+        <module name="mingruishopcommoncore" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mingruishopbasiceurekaserver" options="-parameters" />
+      <module name="mingruishopbasics" options="-parameters" />
+      <module name="mingruishopbasicuploadserver" options="-parameters" />
+      <module name="mingruishopbasiczuulserver" options="-parameters" />
+      <module name="mingruishopcommoms" options="-parameters" />
+      <module name="mingruishopcommoncore" options="-parameters" />
+      <module name="mingruishopservice" options="-parameters" />
+      <module name="mingruishopserviceapi" options="-parameters" />
+      <module name="mingruishopserviceapixxx" options="-parameters" />
+      <module name="mingruishopservicexxx" options="-parameters" />
+    </option>
+  </component>
+</project>
