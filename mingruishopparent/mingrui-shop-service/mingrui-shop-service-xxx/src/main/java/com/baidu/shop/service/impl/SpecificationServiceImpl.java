@@ -78,7 +78,7 @@ public class SpecificationServiceImpl extends BaseApiService implements Specific
         SpecParamEntity specParamEntity = new SpecParamEntity();
         specParamEntity.setGroupId(id);
         int i = specParamMapper.selectCount(specParamEntity);
-        if(i>0)return this.setResultError("当前规格下有参数,清先删除参数!");
+        if(i>0)return this.setResultError("当前规格下有绑定参数,清先删除参数!");
         specGroupMapper.deleteByPrimaryKey(id);
         return this.setResultSuccess("删除成功");
     }

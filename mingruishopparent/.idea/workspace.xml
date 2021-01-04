@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37f9e182-b6e7-4d80-99d7-ba43d64738cd" name="Default Changelist" comment="">
+    <list default="true" id="37f9e182-b6e7-4d80-99d7-ba43d64738cd" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/SpecificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/SpecificationServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -466,7 +467,7 @@
       <workItem from="1609684489295" duration="52000" />
       <workItem from="1609687919572" duration="183000" />
       <workItem from="1609732038140" duration="10216000" />
-      <workItem from="1609750690023" duration="13935000" />
+      <workItem from="1609750690023" duration="14620000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1609757814777</created>
