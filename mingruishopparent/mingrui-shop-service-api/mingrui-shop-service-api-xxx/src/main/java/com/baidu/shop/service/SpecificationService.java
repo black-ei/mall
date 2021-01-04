@@ -1,8 +1,11 @@
 package com.baidu.shop.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.baidu.shop.base.Result;
 import com.baidu.shop.dto.SpecGroupDTO;
+import com.baidu.shop.dto.SpecParamDTO;
 import com.baidu.shop.entity.SpecGroupEntity;
+import com.baidu.shop.entity.SpecParamEntity;
 import com.baidu.shop.validate.group.MingruiOperation;
 import com.google.gson.JsonObject;
 import io.swagger.annotations.Api;
@@ -32,5 +35,21 @@ public interface SpecificationService {
     @ApiOperation("新增规格组")
     @DeleteMapping(value = "/spec/del")
     Result<List<JsonObject>> delSepcGroupInfo(@NotNull Integer id);
+
+    @ApiOperation("查询规格参数")
+    @GetMapping("/specparam/getSpecParamInfo")
+    Result<List<SpecParamEntity>> getSpecParamInfo(@Validated(value = {MingruiOperation.get.class}) SpecParamDTO specParamDTO);
+
+    @ApiOperation("新增分组参数字段")
+    @PostMapping("/specparam/save")
+    Result<JSONObject> saveSpecParamInfo(@RequestBody @Validated(value = {MingruiOperation.add.class}) SpecParamDTO specParamDTO);
+
+    @ApiOperation("修改分组参数字段")
+    @PutMapping("/specparam/save")
+    Result<JSONObject> editSpecParamInfo(@RequestBody @Validated(value = {MingruiOperation.update.class}) SpecParamDTO specParamDTO);
+
+    @ApiOperation("删除分组参数字段")
+    @DeleteMapping("/specparam/del")
+    Result<JSONObject> deleteSpecParamInfo(@NotNull(message = "主键不能为空") Integer id);
 
 }
