@@ -62,7 +62,6 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
     public Result<JSONObject> delCategoryById(Integer id) {
         //判断id是否合法
         if (null==id || id<=0) return this.setResultError("id不合法!");
-
         //根据id查询当前节点信息
         CategoryEntity categoryEntity = categoryMapper.selectByPrimaryKey(id);
         if(null==categoryEntity) return this.setResultError("数据不存在!");
@@ -72,10 +71,6 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
 
         //判断是否为根节点,根节点不能被删除
         if(categoryEntity.getParentId()==0) return this.setResultError("当前节点为根节点无法删除!");
-        //判断当前节点的父节点是否有其他子节点
-        Example example = new Example(CategoryEntity.class);
-        example.createCriteria().andEqualTo("parentId", categoryEntity.getParentId());
-        List<CategoryEntity> entityList = categoryMapper.selectByExample(example);
 
         //判断是否有品牌关联分类表
         Example example1 = new Example(CategoryBrand.class);
@@ -83,6 +78,10 @@ public class CategoryServiceImpl extends BaseApiService implements CategoryServi
         List<CategoryBrand> categoryBrands = categoryBrandMapper.selectByExample(example1);
         if(categoryBrands.size()>0)return this.setResultError("当前节点有品牌绑定,请先删除品牌");
 
+        //判断当前节点的父节点是否有其他子节点
+        Example example = new Example(CategoryEntity.class);
+        example.createCriteria().andEqualTo("parentId", categoryEntity.getParentId());
+        List<CategoryEntity> entityList = categoryMapper.selectByExample(example);
 
         //当前节点的父节点只有当前节点,将当前节点的父节(删除后当前节点后就不是子节点而变成叶子节点)把isParent改为0
         if(entityList.size()<=1){
