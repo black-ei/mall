@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37f9e182-b6e7-4d80-99d7-ba43d64738cd" name="Default Changelist" comment="test">
+    <list default="true" id="37f9e182-b6e7-4d80-99d7-ba43d64738cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/SpecificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/SpecificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/src/main/java/com/baidu/shop/upload/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/src/main/java/com/baidu/shop/upload/controller/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/target/classes/com/baidu/shop/upload/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/target/classes/com/baidu/shop/upload/controller/UploadController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -327,7 +332,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RunZuulServerApplication">
+  <component name="RunManager" selected="Spring Boot.RunUploadServerApplication">
     <configuration name="RunEurekaServerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="mingrui-shop-basic-eureka-server" />
       <extension name="coverage">
@@ -341,21 +346,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunXXXApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mingrui-shop-service-xxx" />
+    <configuration name="RunUploadServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mingrui-shop-basic-uploadserver" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.baidu.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.RunXXXApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.RunUploadServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunXXXApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mingruishopservicexxx" />
+    <configuration name="RunXXXApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mingrui-shop-service-xxx" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.baidu.*" />
@@ -395,11 +400,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.RunUploadServerApplication" />
+        <item itemvalue="Spring Boot.RunEurekaServerApplication (1)" />
         <item itemvalue="Spring Boot.RunXXXApplication (1)" />
         <item itemvalue="Spring Boot.RunZuulServerApplication (1)" />
-        <item itemvalue="Spring Boot.RunEurekaServerApplication (1)" />
         <item itemvalue="Spring Boot.RunZuulServerApplication" />
-        <item itemvalue="Spring Boot.RunXXXApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -408,40 +413,26 @@
       <serviceView>
         <option name="contentProportion" value="0.29849726" />
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e9021073" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e9021073" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6101d9b2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e9021073" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@67177073" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
     </option>
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@104afc7c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@104afc7c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@38eaa821" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-          <option name="viewType" value="contributor" />
-          <option name="roots">
-            <list>
-              <ServiceState>
-                <option name="contributor" value="com.intellij.execution.dashboard.RunConfigurationsServiceViewContributor" />
-              </ServiceState>
-            </list>
-          </option>
-        </serviceView>
-      </list>
-    </option>
-    <option name="selectedView" value="0" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -467,7 +458,8 @@
       <workItem from="1609684489295" duration="52000" />
       <workItem from="1609687919572" duration="183000" />
       <workItem from="1609732038140" duration="10216000" />
-      <workItem from="1609750690023" duration="14620000" />
+      <workItem from="1609750690023" duration="15104000" />
+      <workItem from="1609830284693" duration="4147000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1609757814777</created>
@@ -504,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609769824391</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="欸">
+      <created>1609771339335</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609771339335</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +514,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -523,7 +524,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="欸" />
+    <option name="LAST_COMMIT_MESSAGE" value="欸" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
