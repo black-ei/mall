@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37f9e182-b6e7-4d80-99d7-ba43d64738cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/src/main/java/com/baidu/shop/upload/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/src/main/java/com/baidu/shop/upload/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/target/classes/com/baidu/shop/upload/controller/UploadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver/target/classes/com/baidu/shop/upload/controller/UploadController.class" afterDir="false" />
     </list>
@@ -385,33 +381,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunZuulServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mingruishopbasiczuulserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.baidu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.RunZuulServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.RunUploadServerApplication" />
-        <item itemvalue="Spring Boot.RunEurekaServerApplication (1)" />
         <item itemvalue="Spring Boot.RunXXXApplication (1)" />
         <item itemvalue="Spring Boot.RunZuulServerApplication (1)" />
-        <item itemvalue="Spring Boot.RunZuulServerApplication" />
+        <item itemvalue="Spring Boot.RunUploadServerApplication" />
+        <item itemvalue="Spring Boot.RunEurekaServerApplication (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
-        <option name="contentProportion" value="0.29849726" />
+        <option name="contentProportion" value="0.045765027" />
         <treeState>
           <expand>
             <path>
@@ -426,7 +408,7 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e9021073" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@67177073" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4f053c75" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -459,7 +441,7 @@
       <workItem from="1609687919572" duration="183000" />
       <workItem from="1609732038140" duration="10216000" />
       <workItem from="1609750690023" duration="15104000" />
-      <workItem from="1609830284693" duration="4147000" />
+      <workItem from="1609830284693" duration="11126000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1609757814777</created>
@@ -503,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609771339335</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fastDFS上传图片">
+      <created>1609847486917</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609847486917</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +514,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="欸" />
-    <option name="LAST_COMMIT_MESSAGE" value="欸" />
+    <MESSAGE value="fastDFS上传图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="fastDFS上传图片" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
