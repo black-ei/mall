@@ -13,6 +13,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Api(tags = "品牌接口")
 @Validated
@@ -31,5 +32,10 @@ public interface BrandService {
     Result<JSONObject> edit(@Validated({MingruiOperation.update.class}) @RequestBody BrandDTO brandDTO);
 
     @DeleteMapping(value = "brand/delete")
+    @ApiOperation(value = "根据id删除品牌信息")
     Result<JSONObject> delete(@NotNull(message = "id不能为空") Integer id);
+
+    @ApiOperation(value = "根据分类id获取绑定的品牌信息")
+    @GetMapping(value = "brand/queryBrandByCategoryId")
+    Result<List<BrandEntity>> queryBrandByCategoryId(@NotNull Integer cid);
 }

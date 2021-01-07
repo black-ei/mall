@@ -36,6 +36,12 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
     private CategoryBrandMapper categoryBrandMapper;
 
     @Override
+    public Result<List<BrandEntity>> queryBrandByCategoryId(@NotNull Integer cid) {
+        List<BrandEntity> list = brandMapper.queryBrandByCategoryId(cid);
+        return this.setResultSuccess(list);
+    }
+
+    @Override
     @Transactional
     public Result<JSONObject> delete(@NotNull(message = "id不能为空") Integer id) {
         brandMapper.deleteByPrimaryKey(id);

@@ -17,16 +17,17 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.annotation.Resource;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RestController
 public class SpecificationServiceImpl extends BaseApiService implements SpecificationService {
 
-    @Autowired
+    @Resource
     private SpecGroupMapper specGroupMapper;
 
-    @Autowired
+    @Resource
     private SpecParamMapper specParamMapper;
 
     @Override
@@ -53,9 +54,13 @@ public class SpecificationServiceImpl extends BaseApiService implements Specific
 
     @Override
     public Result<List<SpecParamEntity>> getSpecParamInfo(SpecParamDTO specParamDTO) {
+        if(null==specParamDTO) return this.setResultError("参数不能为空");
+
         Example example = new Example(SpecParamEntity.class);
-        example.createCriteria().andEqualTo("groupId",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getGroupId());
+        if(null!=specParamDTO.getGroupId()) example.createCriteria().andEqualTo("groupId",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getGroupId());
+        if(null!=specParamDTO.getCid()) example.createCriteria().andEqualTo("cid",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getCid());
         return this.setResultSuccess(specParamMapper.selectByExample(example));
+
     }
 
     @Override

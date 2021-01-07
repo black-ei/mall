@@ -38,7 +38,7 @@ public interface SpecificationService {
 
     @ApiOperation("查询规格参数")
     @GetMapping("/specparam/getSpecParamInfo")
-    Result<List<SpecParamEntity>> getSpecParamInfo(@Validated(value = {MingruiOperation.get.class}) SpecParamDTO specParamDTO);
+    Result<List<SpecParamEntity>> getSpecParamInfo(SpecParamDTO specParamDTO);
 
     @ApiOperation("新增分组参数字段")
     @PostMapping("/specparam/save")

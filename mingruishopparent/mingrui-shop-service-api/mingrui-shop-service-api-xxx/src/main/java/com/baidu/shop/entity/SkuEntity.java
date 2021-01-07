@@ -1,6 +1,5 @@
 package com.baidu.shop.entity;
 
-import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import javax.persistence.GeneratedValue;
@@ -10,20 +9,19 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Data
-@Table(name = "tb_spu")
-@ApiModel(value = "spu是一个抽象性商品的描述")
-public class SpuEntity {
-    @Id
+@Table(name = "tb_sku")
+public class SkuEntity {
+
+    @Id//此处必须写long类型,因为现在新增的id已经超过int的范围了
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
+    private Integer spuId;
     private String title;
-    private String subTitle;
-    private Integer cid1;
-    private Integer cid2;
-    private Integer cid3;
-    private Integer brandId;
-    private Integer saleable;
-    private Integer valid;
+    private String images;
+    private Integer price;
+    private String indexes;
+    private String ownSpec;
+    private Integer enable;
     private Date createTime;
     private Date lastUpdateTime;
 }
