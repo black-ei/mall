@@ -13,6 +13,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 
 @ApiModel(value = "商品类目类")
 @Data
@@ -22,6 +23,7 @@ public class CategoryEntity {
     @Id
     @ApiModelProperty(value = "类目主键",example = "1")
     @NotNull(message = "ID不能为NULL",groups = {MingruiOperation.update.class})
+    @Null(message = "ID将由数据库生成",groups = {MingruiOperation.add.class})
     private Integer id;
 
     @ApiModelProperty(value = "类目名称")

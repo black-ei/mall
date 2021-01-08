@@ -18,6 +18,5 @@ public class StockDTO {
     @ApiModelProperty(value = "秒杀总数量", example = "1")
     private Integer seckillTotal;
     @ApiModelProperty(value = "库存数量", example = "1")
-    @NotNull(message = "库存数量不能为空",groups = {MingruiOperation.add.class,MingruiOperation.update.class})
     private Integer stock;
 }

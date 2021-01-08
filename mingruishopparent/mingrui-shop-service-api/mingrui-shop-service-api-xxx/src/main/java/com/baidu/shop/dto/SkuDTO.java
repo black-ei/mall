@@ -36,5 +36,6 @@ public class SkuDTO {
     @ApiModelProperty(value = "最后修改时间")
     private Date lastUpdateTime;
     @ApiModelProperty(value = "库存")
+    @NotNull(message = "库存数量不能为空",groups = {MingruiOperation.add.class,MingruiOperation.update.class})
     private Integer stock;
 }

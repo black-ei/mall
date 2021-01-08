@@ -9,6 +9,7 @@ import lombok.Data;
 import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
@@ -21,7 +22,7 @@ public class SpuDTO extends BaseDTO{
     @NotNull(message = "主键不能为空",groups = {MingruiOperation.update.class})
     private Integer id;
     @ApiModelProperty(value = "标题")
-    @NotBlank(message = "标题不能为空",groups = {MingruiOperation.update.class,MingruiOperation.add.class})
+    @NotEmpty(message = "标题不能为空",groups = {MingruiOperation.update.class,MingruiOperation.add.class})
     private String title;
     @ApiModelProperty(value = "子标题")
     private String subTitle;
@@ -40,7 +41,7 @@ public class SpuDTO extends BaseDTO{
     @ApiModelProperty(value = "是否上架,0下架,1上架",example = "1")//不需要验证,新增时直接设置默认值
     private Integer saleable;
     //不需要验证,新增时直接设置默认值
-    @ApiModelProperty(value = "是否有效，0失效，1有效", example = "1")
+    @ApiModelProperty(value = "是否有效，0已删除，1有效", example = "1")
     private Integer valid;
     //不需要验证,新增时直接设置默认值
     @ApiModelProperty(value = "添加时间")

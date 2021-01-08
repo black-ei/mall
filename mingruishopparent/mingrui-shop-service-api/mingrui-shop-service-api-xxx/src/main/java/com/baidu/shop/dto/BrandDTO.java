@@ -18,7 +18,7 @@ public class BrandDTO extends BaseDTO {
 
     @ApiModelProperty(value = "品牌主键",example = "1")
     @NotNull(message = "ID不能为空",groups = {MingruiOperation.update.class})
-    @Null(message = "save不能传递id",groups = {MingruiOperation.add.class})
+    @Null(message = "ID将由数据库生成",groups = {MingruiOperation.add.class})
     private Integer id;
 
     @ApiModelProperty(value = "品牌名称")
