@@ -32,7 +32,7 @@ public interface SpecificationService {
     @PutMapping(value = "/spec/save")
     Result<List<JsonObject>> editSepcGroupInfo(@Validated(value = {MingruiOperation.update.class}) @RequestBody  SpecGroupDTO specGroupDTO);
 
-    @ApiOperation("新增规格组")
+    @ApiOperation("删除规格组")
     @DeleteMapping(value = "/spec/del")
     Result<List<JsonObject>> delSepcGroupInfo(@NotNull Integer id);
 
