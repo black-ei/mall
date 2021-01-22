@@ -50,6 +50,7 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
     private StockMapper stockMapper;
 
     @Override
+    @Transactional
     public Result<List<SkuDTO>> downGood(@NotNull Integer spuId) {
         //saleable
         SpuEntity spuEntity = spuMapper.selectByPrimaryKey(spuId);

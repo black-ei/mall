@@ -11,13 +11,13 @@
         <module name="mingrui-shop-basic-eureka-server" />
         <module name="mingruishopservicexxx" />
         <module name="mingruishopserviceapixxx" />
-        <module name="mingruishopcommoncore" />
+        <module name="mingrui-shop-service-api-xxx" />
         <module name="mingruishopbasiceurekaserver" />
         <module name="mingruishopbasiczuulserver" />
         <module name="mingrui-shop-service-xxx" />
         <module name="mingrui-shop-basic-uploadserver" />
         <module name="mingruishopbasicuploadserver" />
-        <module name="mingrui-shop-service-api-xxx" />
+        <module name="mingruishopcommoncore" />
         <module name="mingrui-shop-basic-zuul-server" />
       </profile>
     </annotationProcessing>

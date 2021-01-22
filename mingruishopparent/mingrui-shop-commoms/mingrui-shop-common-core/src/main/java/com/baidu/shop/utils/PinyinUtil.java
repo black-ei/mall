@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 public class PinyinUtil {
 
     public static void main(String[] args) {
-        String str = "AAA";
+        String str = "aaa";
         System.out.println(getUpperCase(str.toCharArray()[0]+"", false));
     }
 
