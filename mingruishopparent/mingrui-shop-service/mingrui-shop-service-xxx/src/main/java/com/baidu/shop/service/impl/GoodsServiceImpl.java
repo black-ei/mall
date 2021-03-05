@@ -75,6 +75,7 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
         SpuEntity spuEntity = BaseBean.copyProperties(spuDTO, SpuEntity.class);
         final Date date = new Date();
         //修改spu
+        spuEntity.setLastUpdateTime(date);
         spuMapper.updateByPrimaryKeySelective(spuEntity);
         //修改spuDetail
         spuDetailMapper.updateByPrimaryKeySelective(BaseBean.copyProperties(spuDTO.getSpuDetail(),SpuDetailEntity.class));
@@ -94,7 +95,7 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
     }
 
     @Override
-    public Result<SpuDetailEntity> getSpuInfo(Integer spuId) {
+    public Result<SpuDetailEntity> getSpuDetail(Integer spuId) {
         return this.setResultSuccess(spuDetailMapper.selectByPrimaryKey(spuId));
     }
 
@@ -134,7 +135,7 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
           //模糊匹配
           if(spuDTO.getTitle()!=null && !"".equals(spuDTO.getTitle()))criteria.andLike("title","%"+spuDTO.getTitle()+"%");
           //排序
-          if(!StringUtils.isEmpty(spuDTO.getSort())) example.setOrderByClause(spuDTO.getOrderByClause());
+          if(StringUtils.isEmpty(spuDTO.getSort())) example.setOrderByClause(spuDTO.getOrderByClause());
       }
         List<SpuEntity> spuEntities = spuMapper.selectByExample(example);
 

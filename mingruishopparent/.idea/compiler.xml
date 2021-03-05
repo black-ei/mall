@@ -7,18 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mingruishopservicesearch" />
         <module name="mingrui-shop-common-core" />
-        <module name="mingrui-shop-basic-eureka-server" />
-        <module name="mingruishopservicexxx" />
-        <module name="mingruishopserviceapixxx" />
-        <module name="mingrui-shop-service-api-xxx" />
-        <module name="mingruishopbasiceurekaserver" />
         <module name="mingruishopbasiczuulserver" />
-        <module name="mingrui-shop-service-xxx" />
-        <module name="mingrui-shop-basic-uploadserver" />
+        <module name="mingruishopbasiceurekaserver" />
+        <module name="mingrui-shop-basic-eureka-server" />
+        <module name="mingruishopserviceapisearch" />
+        <module name="mingruishopservicexxx" />
         <module name="mingruishopbasicuploadserver" />
-        <module name="mingruishopcommoncore" />
+        <module name="mingrui-shop-service-api-xxx" />
+        <module name="mingrui-shop-basic-uploadserver" />
         <module name="mingrui-shop-basic-zuul-server" />
+        <module name="mingrui-shop-service-xxx" />
+        <module name="mingruishopserviceapixxx" />
+        <module name="mingruishopcommoncore" />
       </profile>
     </annotationProcessing>
   </component>
@@ -38,7 +40,9 @@
       <module name="mingruishopcommoncore" options="-parameters" />
       <module name="mingruishopservice" options="-parameters" />
       <module name="mingruishopserviceapi" options="-parameters" />
+      <module name="mingruishopserviceapisearch" options="-parameters" />
       <module name="mingruishopserviceapixxx" options="-parameters" />
+      <module name="mingruishopservicesearch" options="-parameters" />
       <module name="mingruishopservicexxx" options="-parameters" />
     </option>
   </component>

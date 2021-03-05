@@ -10,7 +10,9 @@
     <file url="file://$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

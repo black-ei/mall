@@ -57,8 +57,11 @@ public class SpecificationServiceImpl extends BaseApiService implements Specific
         if(null==specParamDTO) return this.setResultError("参数不能为空");
 
         Example example = new Example(SpecParamEntity.class);
-        if(null!=specParamDTO.getGroupId()) example.createCriteria().andEqualTo("groupId",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getGroupId());
-        if(null!=specParamDTO.getCid()) example.createCriteria().andEqualTo("cid",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getCid());
+        Example.Criteria criteria = example.createCriteria();
+        if(null!=specParamDTO.getGroupId()) criteria.andEqualTo("groupId",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getGroupId());
+        if(null!=specParamDTO.getCid()) criteria.andEqualTo("cid",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getCid());
+        if(null!=specParamDTO.getSearching()) criteria.andEqualTo("searching",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getSearching());
+
         return this.setResultSuccess(specParamMapper.selectByExample(example));
 
     }

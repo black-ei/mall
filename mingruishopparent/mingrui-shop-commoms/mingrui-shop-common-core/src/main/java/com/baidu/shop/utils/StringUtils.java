@@ -7,6 +7,6 @@ public class StringUtils {
     }
 
     public static Boolean isEmpty(String str){
-        return (str==null || str.equals(""))?true:false;
+        return str!=null && !str.equals("");
     }
 }
