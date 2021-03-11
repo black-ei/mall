@@ -36,6 +36,15 @@ public class BrandServiceImpl extends BaseApiService implements BrandService {
     private CategoryBrandMapper categoryBrandMapper;
 
     @Override
+    public Result<List<BrandEntity>> getBrandByIds(String brandStrId) {
+        if(brandStrId==null || "".equals(brandStrId)) return this.setResultError("参数为空");
+        List<BrandEntity> list = brandMapper.selectByIdList(Arrays.asList(brandStrId.split(","))
+                .stream().map(id -> Integer.valueOf(id))
+                .collect(Collectors.toList()));
+        return this.setResultSuccess(list);
+    }
+
+    @Override
     public Result<List<BrandEntity>> queryBrandByCategoryId(@NotNull Integer cid) {
         List<BrandEntity> list = brandMapper.queryBrandByCategoryId(cid);
         return this.setResultSuccess(list);

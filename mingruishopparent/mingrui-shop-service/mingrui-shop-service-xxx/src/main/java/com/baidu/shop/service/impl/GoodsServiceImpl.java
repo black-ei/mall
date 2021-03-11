@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.baidu.shop.base.BaseApiService;
 import com.baidu.shop.base.BaseBean;
 import com.baidu.shop.base.Result;
+import com.baidu.shop.component.MyRabbitMQ;
+import com.baidu.shop.constant.MqMessageConstant;
 import com.baidu.shop.dto.SkuDTO;
 import com.baidu.shop.dto.SpuDTO;
 import com.baidu.shop.entity.SkuEntity;
@@ -48,6 +50,8 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
     private SkuMapper skuMapper;
     @Resource
     private StockMapper stockMapper;
+    @Resource
+    private MyRabbitMQ myRabbitMQ;
 
     @Override
     @Transactional
@@ -66,12 +70,20 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
         spuDetailMapper.deleteByPrimaryKey(spuId);
         //直接删除就无法删除stock,先查询查询sku,获得skuID
         this.delSkuAndStock(spuId);
+        myRabbitMQ.send(spuId+"",MqMessageConstant.SPU_ROUT_KEY_DELETE);//发送MQ消息,删除es 信息
         return this.setResultSuccess();
     }
 
     @Override
-    @Transactional
     public Result<JSONObject> editSpuInfo(SpuDTO spuDTO) {
+        //事务拆分 为了确保spuInfo提交之后才发送MQ消息,否者有可能发送了消息(MQ消费者消费时当前事务还未提交,就会查到未提交的脏数据)
+            this.editSpuTran(spuDTO);
+            myRabbitMQ.send(spuDTO.getId()+"",MqMessageConstant.SPU_ROUT_KEY_UPDATE);//发送MQ消息,修改es 信息
+        return this.setResultSuccess();
+    }
+
+    @Transactional
+    public void editSpuTran(SpuDTO spuDTO){
         SpuEntity spuEntity = BaseBean.copyProperties(spuDTO, SpuEntity.class);
         final Date date = new Date();
         //修改spu
@@ -84,8 +96,6 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
         delSkuAndStock(spuEntity.getId());
         //进行新增sku和stock
         saveSkuAndStock(spuDTO,spuEntity.getId(),date);
-
-        return this.setResultSuccess();
     }
 
     @Override
@@ -100,9 +110,16 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
     }
 
     @Override
-    @Transactional
     public Result<JSONObject> saveSpuInfo(SpuDTO spuDTO) {
 
+        Integer spuId = saveSpuTran(spuDTO);//事务拆分 为了确保spuInfo提交之后才发送MQ消息,否者有可能发送了消息(MQ消费者消费时当前事务还未提交,就会查不到数据)
+
+        myRabbitMQ.send(spuId+"", MqMessageConstant.SPU_ROUT_KEY_SAVE);//发送MQ消息,添加到es
+        return this.setResultSuccess();
+    }
+
+    @Transactional
+    public Integer saveSpuTran(SpuDTO spuDTO){
         final Date date = new Date();
         //新增spu
         SpuEntity spuEntity = BaseBean.copyProperties(spuDTO, SpuEntity.class);
@@ -117,8 +134,7 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
         spuDetailMapper.insertSelective(spuDetailEntity);
         //进行新增sku和stock
         saveSkuAndStock(spuDTO,spuEntity.getId(),date);
-
-        return this.setResultSuccess();
+        return spuEntity.getId();
     }
 
 
@@ -130,6 +146,8 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
         Example example = new Example(SpuEntity.class);
         Example.Criteria criteria = example.createCriteria();
       if(null!=spuDTO){
+          //通过id查找spu
+           if (spuDTO.getId()!=null) criteria.andEqualTo("id",spuDTO.getId());
           //判断 上架 下架
           if (spuDTO.getSaleable()!=null && spuDTO.getSaleable()<2 && spuDTO.getSaleable()>=0) criteria.andEqualTo("saleable",spuDTO.getSaleable());
           //模糊匹配

@@ -23,7 +23,7 @@ public interface SpecificationService {
 
     @ApiOperation("通过条件查询规格组")
     @GetMapping(value = "/spec/groups")
-    Result<List<SpecGroupEntity>> getSepcGroupInfo(@Validated(value = {MingruiOperation.get.class})SpecGroupDTO specGroupDTO);
+    Result<List<SpecGroupEntity>> getSepcGroupInfo(@SpringQueryMap @Validated(value = {MingruiOperation.get.class})SpecGroupDTO specGroupDTO);
 
     @ApiOperation("新增规格组")
     @PostMapping(value = "/spec/save")

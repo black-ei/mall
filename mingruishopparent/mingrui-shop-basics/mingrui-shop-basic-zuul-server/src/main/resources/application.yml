@@ -5,17 +5,21 @@ spring:
   application:
     name: eureka-zuul
 zuul:
+  prefix: /api
   # 声明路由
   routes:
+    xxx-server: /manage/**
+    search-server: /search/**
+    user-server: /user-center/**
     # 路由名称
-    api-xxx:
-      # 声明将所有以/api-ribbon/的请求都转发到eureka-ribbon的服务中
-      path: /api-xxx/**
-      serviceId: xxx-server
-      # 搜索路由
-    api-search:
-      path: /api-search/**
-      serviceId: search-server
+#    api-xxx:
+#      # 声明将所有以/api-ribbon/的请求都转发到eureka-ribbon的服务中
+#      path: /api-xxx/**
+#      serviceId: xxx-server
+#      # 搜索路由
+#    api-search:
+#      path: /api-search/**
+#      serviceId: search-server
       # 启用重试
   retryable: true
   # 包含此路径的不进行路由
@@ -23,9 +27,10 @@ zuul:
   # 忽略上传服务
   ignored-services: -upload-server
   #配置负载
+
 ribbon:
-  ConnectTimeout: 250 # 连接超时时间(ms)
-  ReadTimeout: 2000 # 通信超时时间(ms)
+  ConnectTimeout: 700 # 连接超时时间(ms)
+  ReadTimeout: 10000 # 通信超时时间(ms)
   OkToRetryOnAllOperations: true # 是否对所有操作重试
   MaxAutoRetriesNextServer: 2 # 同一服务不同实例的重试次数
   MaxAutoRetries: 1 # 同一实例的重试次数

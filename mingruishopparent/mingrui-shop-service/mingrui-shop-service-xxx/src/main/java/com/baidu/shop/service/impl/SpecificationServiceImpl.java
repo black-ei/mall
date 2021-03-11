@@ -61,6 +61,7 @@ public class SpecificationServiceImpl extends BaseApiService implements Specific
         if(null!=specParamDTO.getGroupId()) criteria.andEqualTo("groupId",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getGroupId());
         if(null!=specParamDTO.getCid()) criteria.andEqualTo("cid",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getCid());
         if(null!=specParamDTO.getSearching()) criteria.andEqualTo("searching",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getSearching());
+        if(specParamDTO.getGeneric()!=null) criteria.andEqualTo("generic",BaseBean.copyProperties(specParamDTO,SpecParamEntity.class).getGeneric());
 
         return this.setResultSuccess(specParamMapper.selectByExample(example));
 
