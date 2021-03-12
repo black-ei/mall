@@ -11,13 +11,14 @@ zuul:
     xxx-server: /manage/**
     search-server: /search/**
     user-server: /user-center/**
+    oauth-server: /oauth-center/**
     # 路由名称
 #    api-xxx:
 #      # 声明将所有以/api-ribbon/的请求都转发到eureka-ribbon的服务中
 #      path: /api-xxx/**
 #      serviceId: xxx-server
 #      # 搜索路由
-#    api-search:
+#    api-search:3+
 #      path: /api-search/**
 #      serviceId: search-server
       # 启用重试
@@ -27,10 +28,12 @@ zuul:
   # 忽略上传服务
   ignored-services: -upload-server
   #配置负载
+  add-host-header: true
+  sensitive-headers:
 
 ribbon:
   ConnectTimeout: 700 # 连接超时时间(ms)
-  ReadTimeout: 10000 # 通信超时时间(ms)
+  ReadTimeout: 2000 # 通信超时时间(ms)
   OkToRetryOnAllOperations: true # 是否对所有操作重试
   MaxAutoRetriesNextServer: 2 # 同一服务不同实例的重试次数
   MaxAutoRetries: 1 # 同一实例的重试次数
@@ -40,8 +43,16 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 13500 # 熔断超时时长：6000ms
+            timeoutInMilliseconds: 16200 # 熔断超时时长：6000ms
 eureka:
   client:
     server-url:
       defaultZone: http://localhost:8761/eureka/
+
+mrshop:
+  #声明不进行拦截的请求用,分隔
+  filter:
+    excludes: /api/oauth-center/oauth/login,/api/user-center/user/register,/api/user-center/user/check/,/api/user-center/user/sendValidCode,/api/user-center/user/checkVerifyCode,/api/oauth-center/oauth/verifyCookie,/api/search/es/search,
+  jwt:
+    pubKeyPath: D:\rea.pub # 公钥地址(私钥加密,公钥解密)
+    cookieName: MRSHOP_TOKEN

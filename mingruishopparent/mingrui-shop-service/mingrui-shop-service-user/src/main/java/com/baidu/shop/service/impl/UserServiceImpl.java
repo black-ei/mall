@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.annotation.Resource;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -27,7 +28,7 @@ import java.util.Random;
 @Slf4j
 public class UserServiceImpl extends BaseApiService implements UserService {
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Autowired
@@ -56,6 +57,10 @@ public class UserServiceImpl extends BaseApiService implements UserService {
     public Result<JSONObject> register(UserDTO userDTO) {
         UserEntity userEntity = BaseBean.copyProperties(userDTO, UserEntity.class);
 
+        Integer name = registerCheck(userDTO.getUsername(), 1).getData();
+        Integer phone = registerCheck(userDTO.getPhone(), 2).getData();
+        if(name!=0 || phone!=0) return this.setResultError("注册失败!");
+
         userEntity.setPassword(BCryptUtil.hashpw(userEntity.getPassword(),BCryptUtil.gensalt()));//加密密码
         userEntity.setCreated(new Date());
         userMapper.insert(userEntity);
@@ -67,7 +72,7 @@ public class UserServiceImpl extends BaseApiService implements UserService {
     public Result<Integer> registerCheck(String value, Integer type) {
         Example example = new Example(UserEntity.class);
         example.createCriteria().andEqualTo(type == 1 ? "username":"phone", value);
-            int i = userMapper.selectCountByExample(example);
+        int i = userMapper.selectCountByExample(example);
 
         return this.setResultSuccess(i);
     }

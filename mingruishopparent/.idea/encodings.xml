@@ -5,9 +5,11 @@
     <file url="file://$PROJECT_DIR$/mingrui-shop-basics" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-uploadserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-user-oauth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-commoms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-oauth" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search" charset="UTF-8" />
