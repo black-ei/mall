@@ -12,6 +12,7 @@ zuul:
     search-server: /search/**
     user-server: /user-center/**
     oauth-server: /oauth-center/**
+    car-server: /car/**
     # 路由名称
 #    api-xxx:
 #      # 声明将所有以/api-ribbon/的请求都转发到eureka-ribbon的服务中
@@ -52,7 +53,7 @@ eureka:
 mrshop:
   #声明不进行拦截的请求用,分隔
   filter:
-    excludes: /api/oauth-center/oauth/login,/api/user-center/user/register,/api/user-center/user/check/,/api/user-center/user/sendValidCode,/api/user-center/user/checkVerifyCode,/api/oauth-center/oauth/verifyCookie,/api/search/es/search,
+    excludes: /api/oauth-center/oauth/login,/api/user-center/user/register,/api/user-center/user/check/,/api/user-center/user/sendValidCode,/api/user-center/user/checkVerifyCode,/api/search/es/search,
   jwt:
     pubKeyPath: D:\rea.pub # 公钥地址(私钥加密,公钥解密)
     cookieName: MRSHOP_TOKEN

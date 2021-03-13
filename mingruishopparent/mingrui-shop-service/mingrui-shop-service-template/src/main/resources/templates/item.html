@@ -196,16 +196,16 @@
                             <div class="fl title">
                                 <div class="control-group">
                                     <div class="controls">
-                                        <input autocomplete="off" type="text" disabled value="1" minnum="1" class="itxt" />
-                                        <a href="javascript:void(0)" class="increment plus">+</a>
-                                        <a href="javascript:void(0)" class="increment mins">-</a>
+                                        <input autocomplete="off" type="text" disabled v-model="num" minnum="1" class="itxt" />
+                                        <a href="javascript:void(0)" class="increment plus" @click.prevent="increment()">+</a>
+                                        <a href="javascript:void(0)" class="increment mins" @click.prevent="decrement()">-</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="fl">
                                 <ul class="btn-choose unstyled">
                                     <li>
-                                        <a href="success-cart.html" target="_blank" class="sui-btn  btn-danger addshopcar">加入购物车</a>
+                                        <a href="success-cart.html" @click.prevent="addCar" class="sui-btn  btn-danger addshopcar">加入购物车</a>
                                     </li>
                                 </ul>
                             </div>
@@ -613,7 +613,46 @@
             skus,
             mrshop,
             groupParams,
-            genericSpec
+            genericSpec,
+            num:1
+        },
+        methods:{//+
+            increment(){
+                if (this.num<this.sku.stock) this.num++;
+            },
+            decrement(){
+                if(this.num>1) this.num--;
+            },
+            addCar() {
+                mrshop.checkUserIsLogin().then(resp=>{//用户已登录
+                    mrshop.http.post("/car/car/addCar",{
+                        skuId:this.sku.id,
+                        num:this.num
+                    }).then(resp=>{
+                        if(!resp.data.success) return;
+                        window.location.href = '../success-cart.html';
+                    }).catch(error=>console.log(error))
+                 }).catch(error=>{//用户未登录
+                        const storeCar = mrshop.store.get("carList") || [];
+
+                        let car = storeCar.find(c=>c.skuId==this.sku.id);
+                        if(car){//存在此当前加入购物车的商品 num+=
+                            car.num+=this.num;
+                        }else{//不存在
+                            car = {
+                                skuId:this.sku.id,
+                                title:this.sku.title,
+                                image:this.images.length>0?this.images[0]:"",
+                                price:this.sku.price,
+                                num:this.num,
+                                ownSpec:JSON.stringify(this.ownSpec)
+                            };
+                            storeCar.push(car)
+                        }
+                        mrshop.store.set("carList",storeCar);
+                    window.location.href = '../success-cart.html';
+                  })
+            }
         },
         computed:{
             sku(){
@@ -622,6 +661,14 @@
             },
             images(){
                 return this.sku.images ? this.sku.images.split(","):[];
+            },
+            ownSpec(){
+                let obj = {};
+                const speMap = JSON.parse(this.sku.ownSpec);
+                Object.keys(speMap).forEach(key=>{
+                    return obj[specParamMap[key]] = speMap[key];
+                })
+                return obj;
             }
         },
         components:{

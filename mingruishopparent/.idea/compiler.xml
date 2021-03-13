@@ -14,11 +14,13 @@
         <module name="mingruishopserviceuser" />
         <module name="mingruishopserviceapiuser" />
         <module name="mingrui-shop-basic-eureka-server" />
+        <module name="mingruishopservicecar" />
         <module name="mingruishopserviceapisearch" />
         <module name="mingruishopservicexxx" />
         <module name="mingrui-shop-service-xxx" />
         <module name="mingruishopbasicuploadserver" />
         <module name="mingrui-shop-service-api-xxx" />
+        <module name="mingruishopserviceapicar" />
         <module name="mingruishopservicetemplate" />
         <module name="mingrui-shop-basic-uploadserver" />
         <module name="mingrui-shop-basic-zuul-server" />
@@ -48,10 +50,12 @@
       <module name="mingruishopcommonoauth" options="-parameters" />
       <module name="mingruishopservice" options="-parameters" />
       <module name="mingruishopserviceapi" options="-parameters" />
+      <module name="mingruishopserviceapicar" options="-parameters" />
       <module name="mingruishopserviceapisearch" options="-parameters" />
       <module name="mingruishopserviceapitemplate" options="-parameters" />
       <module name="mingruishopserviceapiuser" options="-parameters" />
       <module name="mingruishopserviceapixxx" options="-parameters" />
+      <module name="mingruishopservicecar" options="-parameters" />
       <module name="mingruishopservicesearch" options="-parameters" />
       <module name="mingruishopservicetemplate" options="-parameters" />
       <module name="mingruishopserviceuser" options="-parameters" />

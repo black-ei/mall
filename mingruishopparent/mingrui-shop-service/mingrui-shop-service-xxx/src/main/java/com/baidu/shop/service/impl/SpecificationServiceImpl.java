@@ -30,6 +30,12 @@ public class SpecificationServiceImpl extends BaseApiService implements Specific
     @Resource
     private SpecParamMapper specParamMapper;
 
+
+    @Override
+    public Result<SpecParamEntity> getSpecParamInfo(@NotNull Integer id) {
+        return this.setResultSuccess(specParamMapper.selectByPrimaryKey(id));
+    }
+
     @Override
     @Transactional
     public Result<JSONObject> deleteSpecParamInfo(@NotNull(message = "主键不能为空") Integer id) {

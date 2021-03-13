@@ -54,6 +54,12 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
     private MyRabbitMQ myRabbitMQ;
 
     @Override
+    public Result<SkuEntity> getSku(@NotNull Long skuId) {
+
+        return this.setResultSuccess(skuMapper.selectByPrimaryKey(skuId));
+    }
+
+    @Override
     @Transactional
     public Result<List<SkuDTO>> downGood(@NotNull Integer spuId) {
         //saleable

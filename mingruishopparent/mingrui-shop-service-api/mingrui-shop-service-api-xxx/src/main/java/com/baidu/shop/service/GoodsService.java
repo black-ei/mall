@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.baidu.shop.base.Result;
 import com.baidu.shop.dto.SkuDTO;
 import com.baidu.shop.dto.SpuDTO;
+import com.baidu.shop.entity.SkuEntity;
 import com.baidu.shop.entity.SpuDetailEntity;
 import com.baidu.shop.entity.SpuEntity;
 import com.baidu.shop.validate.group.MingruiOperation;
@@ -49,4 +50,7 @@ public interface GoodsService {
     @GetMapping(value = "goods/down")
     Result<List<SkuDTO>> downGood(@NotNull Integer spuId);
 
+    @ApiOperation(value = "通过skuId获取sku")
+    @GetMapping(value = "goods/skuById")
+    Result<SkuEntity> getSku(@RequestParam @NotNull Long skuId);
 }

@@ -10,6 +10,7 @@ import com.baidu.shop.validate.group.MingruiOperation;
 import com.google.gson.JsonObject;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.plugin.Intercepts;
 import org.springframework.cloud.openfeign.SpringQueryMap;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -53,4 +54,7 @@ public interface SpecificationService {
     @DeleteMapping("/specparam/del")
     Result<JSONObject> deleteSpecParamInfo(@NotNull(message = "主键不能为空") Integer id);
 
+    @ApiOperation("通过id查询规格参数")
+    @GetMapping("/specparam/getSpecParamInfoById")
+    Result<SpecParamEntity> getSpecParamInfo(@RequestParam @NotNull Integer id);
 }

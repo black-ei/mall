@@ -37,6 +37,7 @@ public class LoginFilter extends ZuulFilter {
         HttpServletRequest request = requestContext.getRequest();//获取request
         String requestURI = request.getRequestURI();//获取当前uri
         List<Boolean> booleans = Arrays.asList(true);
+
         jwtConfig.getExcludePath().forEach(uri->{
             if (requestURI.equals(uri) || requestURI.contains(uri)) {
                 booleans.set(0,false);
