@@ -13,6 +13,8 @@ zuul:
     user-server: /user-center/**
     oauth-server: /oauth-center/**
     car-server: /car/**
+    order-server: /order/**
+    pay-server: /pay/**
     # 路由名称
 #    api-xxx:
 #      # 声明将所有以/api-ribbon/的请求都转发到eureka-ribbon的服务中
@@ -33,8 +35,8 @@ zuul:
   sensitive-headers:
 
 ribbon:
-  ConnectTimeout: 700 # 连接超时时间(ms)
-  ReadTimeout: 2000 # 通信超时时间(ms)
+  ConnectTimeout: 3000 # 连接超时时间(ms)
+  ReadTimeout: 3000 # 通信超时时间(ms)
   OkToRetryOnAllOperations: true # 是否对所有操作重试
   MaxAutoRetriesNextServer: 2 # 同一服务不同实例的重试次数
   MaxAutoRetries: 1 # 同一实例的重试次数
@@ -44,7 +46,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 16200 # 熔断超时时长：6000ms
+            timeoutInMilliseconds: 36000 # 熔断超时时长：6000ms
 eureka:
   client:
     server-url:

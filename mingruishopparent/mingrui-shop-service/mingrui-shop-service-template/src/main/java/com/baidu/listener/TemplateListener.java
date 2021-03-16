@@ -39,11 +39,9 @@ public class TemplateListener {
     )
 
     public void save(Message message, Channel channel) throws IOException {
-        log.info("template服务接受到需要保存数据的消息: " + new
-                String(message.getBody()));
+        log.info("template服务接受到需要保存数据的消息: " + new String(message.getBody()));
             //根据spuId生成页面
-        templateService.createStaticHTMLTemplate(Integer.valueOf(new
-                String(message.getBody())));
+        templateService.createStaticHTMLTemplate(Integer.valueOf(new String(message.getBody())));
         channel.basicAck(message.getMessageProperties().getDeliveryTag(), true);
     }
 

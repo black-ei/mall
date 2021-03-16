@@ -630,6 +630,16 @@
                         num:this.num
                     }).then(resp=>{
                         if(!resp.data.success) return;
+                      const car = {
+                            skuId:this.sku.id,
+                            title:this.sku.title,
+                            image:this.images.length>0?this.images[0]:"",
+                            price:this.sku.price,
+                            num:this.num,
+                            stock:this.sku.stock,
+                            ownSpec:JSON.stringify(this.ownSpec)
+                        };
+                        mrshop.store.set("tempGoods",JSON.stringify(car));
                         window.location.href = '../success-cart.html';
                     }).catch(error=>console.log(error))
                  }).catch(error=>{//用户未登录
@@ -645,11 +655,14 @@
                                 image:this.images.length>0?this.images[0]:"",
                                 price:this.sku.price,
                                 num:this.num,
+                                stock:this.sku.stock,
                                 ownSpec:JSON.stringify(this.ownSpec)
                             };
                             storeCar.push(car)
                         }
-                        mrshop.store.set("carList",storeCar);
+                    mrshop.store.set("tempGoods",storeCar);
+                        car.num = this.num;//当前的
+                    mrshop.store.set("carList",car);//
                     window.location.href = '../success-cart.html';
                   })
             }

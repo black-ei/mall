@@ -1,6 +1,7 @@
 package com.baidu.shop.service;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONPObject;
 import com.baidu.shop.base.Result;
 import com.baidu.shop.dto.Car;
 import io.swagger.annotations.Api;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Api(tags = "购物车接口")
@@ -26,4 +29,8 @@ public interface CarService {
     @GetMapping("car/getGoodsCar")
     @ApiOperation(value = "登陆状态下获取redis购物车数据")
     Result<List<Car>> getGoodsCar(@CookieValue(value = "MRSHOP_TOKEN") String token);
+
+    @GetMapping("car/operationGoodsCar")
+    @ApiOperation(value = "登陆状态下获取redis购物车数据")
+    Result<JSONPObject> operationGoodsCar(@NotEmpty Boolean type, @NotNull Long skuId, @CookieValue(value = "MRSHOP_TOKEN") String token);
 }

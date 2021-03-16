@@ -13,11 +13,15 @@
     <file url="file://$PROJECT_DIR$/mingrui-shop-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-car" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-pay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-template" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-car" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-pay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user" charset="UTF-8" />

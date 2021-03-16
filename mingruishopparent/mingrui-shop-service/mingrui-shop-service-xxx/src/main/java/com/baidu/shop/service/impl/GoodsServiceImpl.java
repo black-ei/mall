@@ -52,11 +52,36 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
     private StockMapper stockMapper;
     @Resource
     private MyRabbitMQ myRabbitMQ;
+/*
+* 更新商品库存
+* @Param1 skuId;
+* @Param2 要减少OR增加的库存数量
+* @Param2 1 为增加库存 其他为减少库存
+* */
+    @Override
+    @Transactional
+    public Result<JSONObject> updateStock(Long skuId, Integer reduce,Integer is) {
+        try {
+            StockEntity stock = stockMapper.selectByPrimaryKey(skuId);
+            if (is==1){
+                stock.setStock(stock.getStock()+reduce);
+
+            }else{
+                if (stock.getStock()<reduce)return this.setResultError("库存不足!");
+                stock.setStock(stock.getStock()-reduce);
+            }
+            stockMapper.updateByPrimaryKeySelective(stock);
+        } catch (Exception e) {
+            e.printStackTrace();
+            this.setResultError("啥也不是!!!");
+        }
+        return this.setResultSuccess();
+    }
 
     @Override
-    public Result<SkuEntity> getSku(@NotNull Long skuId) {
+    public Result<SkuDTO> getSku(@NotNull Long skuId) {
 
-        return this.setResultSuccess(skuMapper.selectByPrimaryKey(skuId));
+        return this.setResultSuccess(skuMapper.selectSkuAndStock(skuId));
     }
 
     @Override

@@ -9,6 +9,9 @@ import tk.mybatis.mapper.common.Mapper;
 import java.util.List;
 
 public interface SkuMapper extends Mapper<SkuEntity>, DeleteByIdListMapper<SkuEntity,Long> {
-    @Select("SELECT k.*,t.`stock` FROM tb_sku k,tb_stock t WHERE k.`id` = t.`sku_id` AND k.`spu_id` = #{spuId}")
+    @Select("SELECT k.*,t.* FROM tb_sku k,tb_stock t WHERE k.`id` = t.`sku_id` AND k.`spu_id` = #{spuId}")
     List<SkuDTO> getSkuAndStock(Integer spuId);
+
+    @Select("SELECT k.*,t.* FROM tb_sku k,tb_stock t WHERE k.`id` = t.`sku_id` AND k.`id` = #{skuId}")
+    SkuDTO selectSkuAndStock(Long skuId);
 }

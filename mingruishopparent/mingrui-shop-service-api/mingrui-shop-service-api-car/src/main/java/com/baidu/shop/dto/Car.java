@@ -31,4 +31,7 @@ public class Car {
     @ApiModelProperty(value = "规格参数")
     @NotEmpty(message = "规格参数不能为空", groups = {MingruiOperation.add.class})
     private String ownSpec;
+    @ApiModelProperty(value = "库存")
+    @NotNull(message = "规格参数不能为空", groups = {MingruiOperation.add.class})
+    private Integer stock;
 }
