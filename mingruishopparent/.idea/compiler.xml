@@ -11,9 +11,11 @@
         <module name="mingrui-shop-common-core" />
         <module name="mingruishopbasiczuulserver" />
         <module name="mingruishopbasiceurekaserver" />
+        <module name="mingruishopbasicuseroauth" />
         <module name="mingruishopserviceuser" />
         <module name="mingruishopserviceapiuser" />
         <module name="mingrui-shop-basic-eureka-server" />
+        <module name="mingruishopserviceapitemplate" />
         <module name="mingrui-shop-service-xxx" />
         <module name="mingruishopservicecar" />
         <module name="mingruishopserviceapisearch" />
@@ -22,15 +24,15 @@
         <module name="mingruishopserviceorder" />
         <module name="mingruishopbasicuploadserver" />
         <module name="mingrui-shop-service-api-xxx" />
-        <module name="mingruishopserviceapicar" />
         <module name="mingruishopserviceapiorder" />
         <module name="mingruishopservicetemplate" />
         <module name="mingrui-shop-basic-uploadserver" />
         <module name="mingrui-shop-basic-zuul-server" />
-        <module name="mingruishopserviceapitemplate" />
-        <module name="mingruishopbasicuseroauth" />
+        <module name="mingruishopserviceserviceaddr" />
+        <module name="mingruishopserviceapicar" />
         <module name="mingruishopcommonoauth" />
         <module name="mingruishopserviceapixxx" />
+        <module name="mingruishopserviceapiaddr" />
         <module name="mingruishopserviceapipay" />
         <module name="mingruishopcommoncore" />
       </profile>
@@ -54,6 +56,7 @@
       <module name="mingruishopcommonoauth" options="-parameters" />
       <module name="mingruishopservice" options="-parameters" />
       <module name="mingruishopserviceapi" options="-parameters" />
+      <module name="mingruishopserviceapiaddr" options="-parameters" />
       <module name="mingruishopserviceapicar" options="-parameters" />
       <module name="mingruishopserviceapiorder" options="-parameters" />
       <module name="mingruishopserviceapipay" options="-parameters" />
@@ -65,6 +68,7 @@
       <module name="mingruishopserviceorder" options="-parameters" />
       <module name="mingruishopservicepay" options="-parameters" />
       <module name="mingruishopservicesearch" options="-parameters" />
+      <module name="mingruishopserviceserviceaddr" options="-parameters" />
       <module name="mingruishopservicetemplate" options="-parameters" />
       <module name="mingruishopserviceuser" options="-parameters" />
       <module name="mingruishopservicexxx" options="-parameters" />

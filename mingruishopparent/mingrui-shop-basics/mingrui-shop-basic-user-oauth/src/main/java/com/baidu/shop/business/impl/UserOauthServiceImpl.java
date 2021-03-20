@@ -35,7 +35,7 @@ public class UserOauthServiceImpl implements UserOauthService {
                 //登陆成功 获得token
                 try {
                     token = JwtUtils.generateToken(new UserInfo(user.get(0).getId(),user.get(0).getUsername()),
-                            jwtConfig.getPrivateKey(),30);
+                            jwtConfig.getPrivateKey(),60);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

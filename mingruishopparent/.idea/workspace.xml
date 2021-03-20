@@ -1,39 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37f9e182-b6e7-4d80-99d7-ba43d64738cd" name="Default Changelist" comment="页面静态化 rabbit 解耦 用户中心(redis存储验证码)">
-      <change afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-order/src/main/java/com/baidu/shop/entity/OrderEntity.java" afterDir="false" />
+    <list default="true" id="37f9e182-b6e7-4d80-99d7-ba43d64738cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-user-oauth/src/main/java/com/baidu/shop/business/impl/UserOauthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-user-oauth/src/main/java/com/baidu/shop/business/impl/UserOauthServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-server/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-basics/mingrui-shop-basic-zuul-server/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/constant/MqMessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/src/main/java/com/baidu/shop/constant/MqMessageConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/constant/MqMessageConstant.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/constant/MqMessageConstant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/global/GlobalException.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/global/GlobalException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/status/HTTPStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/status/HTTPStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/JSONUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/JSONUtil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/JSONUtil$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/JSONUtil$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/JSONUtil$JSON_TYPE.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/JSONUtil$JSON_TYPE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/JSONUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/JSONUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-commoms/mingrui-shop-common-core/target/classes/com/baidu/shop/utils/StringUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-car/src/main/java/com/baidu/shop/dto/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-car/src/main/java/com/baidu/shop/dto/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-car/src/main/java/com/baidu/shop/service/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-car/src/main/java/com/baidu/shop/service/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/src/main/java/com/baidu/shop/service/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/target/classes/com/baidu/shop/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/target/classes/com/baidu/shop/service/GoodsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/target/classes/com/baidu/shop/service/SpecificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-xxx/target/classes/com/baidu/shop/service/SpecificationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-order/src/main/java/com/baidu/shop/entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/mingrui-shop-service-api-order/src/main/java/com/baidu/shop/entity/OrderEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-car/src/main/java/com/baidu/shop/service/impl/CarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-car/src/main/java/com/baidu/shop/service/impl/CarServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-car/target/classes/com/baidu/shop/service/impl/CarServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-car/target/classes/com/baidu/shop/service/impl/CarServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/listener/TemplateListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/listener/TemplateListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/resources/templates/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/resources/templates/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/target/classes/com/baidu/listener/TemplateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/target/classes/com/baidu/listener/TemplateListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/target/classes/templates/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/target/classes/templates/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/target/classes/com/baidu/shop/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-user/target/classes/com/baidu/shop/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/mapper/SkuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/mapper/SkuMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/src/main/java/com/baidu/shop/service/impl/GoodsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/target/classes/com/baidu/shop/mapper/SkuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/target/classes/com/baidu/shop/mapper/SkuMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/target/classes/com/baidu/shop/service/impl/GoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-xxx/target/classes/com/baidu/shop/service/impl/GoodsServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mingrui-shop-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mingrui-shop-service/pom.xml" afterDir="false" />
     </list>
@@ -110,7 +92,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mingrui-shop-service/mingrui-shop-service-template/src/main/java/com/baidu/feign" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../data/SourceCode/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="recentsLimit" value="10" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -119,19 +101,19 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Learningdata\6month\ideaPackage\mall\mingruishopparent\mingrui-shop-service-api\mingrui-shop-service-api-xxx\src" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.baidu.shop.dto" />
-      <recent name="com.baidu.feign" />
-      <recent name="com.baidu.shop.config" />
-      <recent name="com.baidu.redis.repository" />
-      <recent name="com.baidu.config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Learningdata\6month\ideaPackage\mall\mingruishopparent\mingrui-shop-service\mingrui-shop-service-template\src\main\java\com\baidu\feign" />
       <recent name="D:\Learningdata\6month\ideaPackage\mall\mingruishopparent\mingrui-shop-service\mingrui-shop-service-template\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.baidu.shop.config" />
+      <recent name="com.baidu.shop.dto" />
+      <recent name="com.baidu.feign" />
+      <recent name="com.baidu.redis.repository" />
+      <recent name="com.baidu.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Learningdata\6month\ideaPackage\mall\mingruishopparent\mingrui-shop-service-api\mingrui-shop-service-api-xxx\src" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -377,7 +359,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RunPayServerApplication">
+  <component name="RunManager" selected="Spring Boot.RunOrderServerApplication">
+    <configuration name="AddrEntity" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bai.shop.entity.AddrEntity" />
+      <module name="mingruishopserviceapiaddr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bai.shop.entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunAddrService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="mingruishopserviceserviceaddr" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.baidu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.RunAddrService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RunCarServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="mingruishopservicecar" />
       <extension name="coverage">
@@ -478,19 +486,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunUserServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="mingruishopserviceuser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.baidu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.baidu.RunUserServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RunXXXApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="mingrui-shop-service-xxx" />
       <extension name="coverage">
@@ -518,29 +513,31 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.AddrEntity" />
       <item itemvalue="Spring Boot.RunTemplateServerApplication" />
       <item itemvalue="Spring Boot.RunUploadServerApplication" />
       <item itemvalue="Spring Boot.RunXXXApplication (1)" />
       <item itemvalue="Spring Boot.RunZuulServerApplication (1)" />
-      <item itemvalue="Spring Boot.RunUserServerApplication" />
       <item itemvalue="Spring Boot.RunOauthServerApplication" />
       <item itemvalue="Spring Boot.RunSearchServerApplication" />
       <item itemvalue="Spring Boot.RunEurekaServerApplication" />
       <item itemvalue="Spring Boot.RunCarServerApplication" />
       <item itemvalue="Spring Boot.RunOrderServerApplication" />
       <item itemvalue="Spring Boot.RunPayServerApplication" />
+      <item itemvalue="Spring Boot.RunAddrService" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.RunCarServerApplication" />
+        <item itemvalue="Spring Boot.RunAddrService" />
         <item itemvalue="Spring Boot.RunPayServerApplication" />
         <item itemvalue="Spring Boot.RunZuulServerApplication (1)" />
         <item itemvalue="Spring Boot.RunOrderServerApplication" />
-        <item itemvalue="Spring Boot.RunCarServerApplication" />
-        <item itemvalue="Spring Boot.RunOauthServerApplication" />
         <item itemvalue="Spring Boot.RunXXXApplication (1)" />
+        <item itemvalue="Spring Boot.RunOauthServerApplication" />
         <item itemvalue="Spring Boot.RunEurekaServerApplication" />
+        <item itemvalue="Application.AddrEntity" />
         <item itemvalue="Spring Boot.RunSearchServerApplication" />
-        <item itemvalue="Spring Boot.RunUserServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -549,22 +546,7 @@
       <serviceView>
         <option name="contentProportion" value="0.2554645" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@53ed7d26" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@53ed7d26" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@15338982" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@53ed7d26" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a42c8a2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -631,7 +613,13 @@
       <workItem from="1615707919588" duration="7786000" />
       <workItem from="1615787752032" duration="19520000" />
       <workItem from="1615864729330" duration="2968000" />
-      <workItem from="1615874674070" duration="17591000" />
+      <workItem from="1615874674070" duration="19785000" />
+      <workItem from="1615960910348" duration="73000" />
+      <workItem from="1615990349937" duration="3233000" />
+      <workItem from="1616047466678" duration="19313000" />
+      <workItem from="1616115243174" duration="25206000" />
+      <workItem from="1616203824821" duration="11257000" />
+      <workItem from="1616230134369" duration="353000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1609757814777</created>
@@ -752,7 +740,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615648924085</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="购物车 支付">
+      <created>1615903455577</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1615903455577</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -782,7 +777,8 @@
     <MESSAGE value="页面静态化 rabbit 解耦 用户中心(redis存储验证码)" />
     <MESSAGE value="用户登陆 鉴权中心 (jwt RSA) zull做全局的请求拦截" />
     <MESSAGE value="购物车 登陆状态存放redis 未登录存Local Storage 登陆后Local Storage同步redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="购物车 登陆状态存放redis 未登录存Local Storage 登陆后Local Storage同步redis" />
+    <MESSAGE value="购物车 支付" />
+    <option name="LAST_COMMIT_MESSAGE" value="购物车 支付" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -809,12 +805,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="brandDTO.image" language="JAVA" />
-        <watch expression="((SearchHitsImpl)highLightHit).aggregations" custom="org.springframework.data.elasticsearch.core.SearchHitsImpl" />
-        <watch expression="userInfo" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

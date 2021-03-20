@@ -10,7 +10,7 @@ import java.util.Date;
 @Data
 public class OrderEntity {
     @Id
-    private Long orderId;//订单id
+    private String orderId;//订单id
     private Long totalPay;//总金额,单位为分
     private Long actualPay;//实付金额,有活动或者优惠的话可能会与实际金额不一直
     private String promotionIds;//促销/活动的id集合

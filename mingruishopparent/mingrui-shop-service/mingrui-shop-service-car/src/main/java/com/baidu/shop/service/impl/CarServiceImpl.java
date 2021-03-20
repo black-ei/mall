@@ -98,20 +98,20 @@ public class CarServiceImpl extends BaseApiService implements CarService {
 
                 Result<SkuDTO> skus = goodsFei.getSku(car.getSkuId());//通过skuId查询suk
                 if(skus.isSuccess()){
-//                    Map<String, String> ownSpecMapItem = JSONUtil.toMapValueString(JSONUtil.toJsonString(skus.getData().getOwnSpec()));
+                    Map<String, String> ownSpecMapItem = JSONUtil.toMapValueString(skus.getData().getOwnSpec());
 
-//                    Map<String, String> ownSpecMap = new HashMap<>();
-//                    ownSpecMapItem.forEach((k,v)->{//转换ownSpecMap
-//                        Result<SpecParamEntity> result = specParmaFeign.getSpecParamInfo(Integer.valueOf(k));
-//                        if (result.isSuccess()){
-//                            ownSpecMap.put(result.getData().getName(),v);
-//                        }
-//                    });
+                    Map<String, String> ownSpecMap = new HashMap<>();
+                    ownSpecMapItem.forEach((k,v)->{//转换ownSpecMap
+                        Result<SpecParamEntity> result = specParmaFeign.getSpecParamInfo(Integer.valueOf(k));
+                        if (result.isSuccess()){
+                            ownSpecMap.put(result.getData().getName(),v);
+                        }
+                    });
 
                     car.setUserId(userInfo.getId());
                     car.setStock(skus.getData().getStock());
                     car.setImage(StringUtils.isEmpty(skus.getData().getImages())?skus.getData().getImages().split(",")[0]:"");
-                    car.setOwnSpec(skus.getData().getOwnSpec());
+                    car.setOwnSpec(JSONUtil.toJsonString(ownSpecMap));
                     car.setPrice(skus.getData().getPrice().longValue());
                     car.setTitle(skus.getData().getTitle());
                     redisRepository.setHash(GOODS_CAR_PRE+userInfo.getId(),car.getSkuId()+"",JSONObject.toJSONString(car));//放入redis

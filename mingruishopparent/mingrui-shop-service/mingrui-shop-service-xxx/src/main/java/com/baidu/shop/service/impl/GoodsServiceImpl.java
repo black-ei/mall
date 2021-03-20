@@ -65,7 +65,6 @@ public class GoodsServiceImpl extends BaseApiService implements GoodsService {
             StockEntity stock = stockMapper.selectByPrimaryKey(skuId);
             if (is==1){
                 stock.setStock(stock.getStock()+reduce);
-
             }else{
                 if (stock.getStock()<reduce)return this.setResultError("库存不足!");
                 stock.setStock(stock.getStock()-reduce);
